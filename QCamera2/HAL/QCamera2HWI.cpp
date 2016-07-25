@@ -7662,7 +7662,8 @@ int32_t QCamera2HardwareInterface::getPPConfig(cam_pp_feature_config_t &pp_confi
             }
 
             if ((multipass) &&
-                    (m_postprocessor.getPPChannelCount() > 1)) {
+                    (m_postprocessor.getPPChannelCount() > 1)
+                    && (!mParameters.getQuadraCfa())) {
                 pp_config.feature_mask &= ~CAM_QCOM_FEATURE_PP_PASS_2;
                 pp_config.feature_mask &= ~CAM_QCOM_FEATURE_ROTATION;
                 pp_config.feature_mask &= ~CAM_QCOM_FEATURE_CDS;
