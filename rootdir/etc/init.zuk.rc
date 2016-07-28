@@ -41,16 +41,38 @@ on init
     chmod 0660 /sys/devices/soc/soc:fpc1020/wl
     chown system system /sys/devices/soc/soc:fpc1020/screen
     chmod 0660 /sys/devices/soc/soc:fpc1020/screen
-    chown system system /sys/class/leds/led:rgb_red/brightness
-    chmod 0660 /sys/class/leds/led:rgb_red/brightness
-    chown system system /sys/class/leds/led:rgb_green/brightness
-    chmod 0660 /sys/class/leds/led:rgb_green/brightness
-    chown system system /sys/class/leds/led:rgb_blue/brightness
-    chmod 0660 /sys/class/leds/led:rgb_blue/brightness
-    chown system system /sys/class/leds/led:rgb_blue/rgbbreath
-    chmod 0660 /sys/class/leds/led:rgb_blue/rgbbreath
-    chown system system /sys/class/leds/led:rgb_red/rgbbreath
-    chmod 0660 /sys/class/leds/led:rgb_red/rgbbreath
+
+    # RGB lights
+    chown system system /sys/class/leds/red/pause_lo
+    chown system system /sys/class/leds/green/pause_lo
+    chown system system /sys/class/leds/blue/pause_lo
+    chown system system /sys/class/leds/red/pause_hi
+    chown system system /sys/class/leds/green/pause_hi
+    chown system system /sys/class/leds/blue/pause_hi
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/rgb/rgb_blink
+    chown system system /sys/class/leds/red/ramp_step_ms
+    chown system system /sys/class/leds/green/ramp_step_ms
+    chown system system /sys/class/leds/blue/ramp_step_ms
+    chown system system /sys/class/leds/red/duty_pcts
+    chown system system /sys/class/leds/green/duty_pcts
+    chown system system /sys/class/leds/blue/duty_pcts
+    chown system system /sys/class/leds/red/start_idx
+    chown system system /sys/class/leds/green/start_idx
+    chown system system /sys/class/leds/blue/start_idx
+    chmod 660 /sys/class/leds/red/ramp_step_ms
+    chmod 660 /sys/class/leds/green/ramp_step_ms
+    chmod 660 /sys/class/leds/blue/ramp_step_ms
+    chmod 660 /sys/class/leds/red/duty_pcts
+    chmod 660 /sys/class/leds/green/duty_pcts
+    chmod 660 /sys/class/leds/blue/duty_pcts
+    chmod 660 /sys/class/leds/red/start_idx
+    chmod 660 /sys/class/leds/green/start_idx
+    chmod 660 /sys/class/leds/blue/start_idx
+    chmod 660 /sys/class/leds/rgb/rgb_blink
+
     chown system system /sys/devices/soc/6a00000.ssusb/power/control
     chmod 0660 /sys/devices/soc/6a00000.ssusb/power/control
     # BEGIN cuigq1 20160127 add for ZBROW-185 hotswap gpio
