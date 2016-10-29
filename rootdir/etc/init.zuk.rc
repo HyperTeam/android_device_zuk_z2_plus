@@ -43,6 +43,8 @@ on init
     chmod 0660 /sys/devices/soc/soc:fpc1020/screen
     chown system system /sys/devices/soc/soc:fpc1020/utouch_disable
     chmod 0660 /sys/devices/soc/soc:fpc1020/utouch_disable
+    chown system system /sys/devices/soc/soc:fpc1020/proximity_state
+    chmod 0660 /sys/devices/soc/soc:fpc1020/proximity_state
 
     chown system system /sys/devices/soc/6a00000.ssusb/power/control
     chmod 0660 /sys/devices/soc/6a00000.ssusb/power/control
