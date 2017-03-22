@@ -55,7 +55,6 @@ vendor/lib/libaudcal.so|d6889616d8016fb672b00078e99bf6b43f4bcd36
 vendor/lib/libaudiodevarb.so|a3e48e0b757a81877230a55ce33cbc22fd1b3f53
 
 # Bluetooth - from Xiaomi 8996
-bin/btnvtool|13f9e701968c8eeea46799af6d4243c551884b68
 bin/wcnss_filter|19ffee438da7a6d6119f0c964d21f7b5f5c760ee
 vendor/lib64/libbtnv.so|3af681e3068a75af02ca9c2d4955e66c6aa2a737
 vendor/lib/libbtnv.so|9bd5ce7d209f6fb511db72718487bc7d12c97b88
