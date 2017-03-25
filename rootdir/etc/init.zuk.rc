@@ -41,6 +41,8 @@ on init
     chmod 0660 /sys/devices/soc/soc:fpc1020/wl
     chown system system /sys/devices/soc/soc:fpc1020/screen
     chmod 0660 /sys/devices/soc/soc:fpc1020/screen
+    chown system system /sys/devices/soc/soc:fpc1020/utouch_disable
+    chmod 0660 /sys/devices/soc/soc:fpc1020/utouch_disable
 
     # RGB lights
     chown system system /sys/class/leds/red/pause_lo
