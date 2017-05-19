@@ -27,7 +27,7 @@
 #
 #
 
-import init.zuk.rc
+import /vendor/etc/init/hw/init.zuk.rc
 
 on early-init
     symlink /data/tombstones /tombstones
