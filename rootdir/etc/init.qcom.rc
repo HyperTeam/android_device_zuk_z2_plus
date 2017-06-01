@@ -396,6 +396,11 @@ service cnd /system/bin/cnd
     group system wifi inet radio wakelock net_admin
     writepid /dev/cpuset/system-background/tasks
 
+service dpmQmiMgr /vendor/bin/dpmQmiMgr
+    class main
+    user system
+    group system
+
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class core
     user root
