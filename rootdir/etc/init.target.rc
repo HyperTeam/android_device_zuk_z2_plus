@@ -50,7 +50,6 @@ on post-fs-data
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
-    mkdir /data/misc/qvop 0660 system system
 
 on property:init.svc.bootanim=running
     write /sys/class/leds/wled/brightness 4095
@@ -65,11 +64,6 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
-
-service qvop-daemon /system/bin/qvop-daemon
-    class late_start
-    user system
-    group system drmrpc
 
 #Start up peripheral manager
 service per_mgr /vendor/bin/pm-service
