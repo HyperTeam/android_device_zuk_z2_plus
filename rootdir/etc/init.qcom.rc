@@ -408,6 +408,7 @@ service rmt_storage /system/bin/rmt_storage
     user root
     group root system wakelock
     shutdown critical
+    ioprio rt 0
     writepid /dev/cpuset/system-background/tasks
 
 service tftp_server /system/bin/tftp_server
