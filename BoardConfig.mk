@@ -17,6 +17,7 @@
 LOCAL_PATH := device/zuk/z2_plus
 
 # Platform
+TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
 TARGET_BOARD_PLATFORM := msm8996
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 
@@ -176,6 +177,10 @@ TARGET_RIL_VARIANT := caf
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
+
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_qcom
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
