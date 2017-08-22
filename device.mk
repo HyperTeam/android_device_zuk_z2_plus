@@ -246,6 +246,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
+# RenderScript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8996
