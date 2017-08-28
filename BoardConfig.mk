@@ -106,6 +106,9 @@ BOARD_HARDWARE_CLASS += device/zuk/z2_plus/cmhw
 # CNE and DPM
 BOARD_USES_QCNE := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
+
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
