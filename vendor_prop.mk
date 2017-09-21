@@ -67,7 +67,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     ro.sf.lcd_density=480 \
     sdm.perf_hint_window=50 \
-    sdm.debug.disable_rotator_split=1
+    sdm.debug.disable_rotator_split=1 \
+    sdm.debug.disable_skip_validate=1
 
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
