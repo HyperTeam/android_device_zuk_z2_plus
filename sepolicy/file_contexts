@@ -10,6 +10,3 @@
 
 # Thermal
 /data/decrypt\.txt                                              u:object_r:thermal_data_file:s0
-
-# Netmgr
-/data/misc/netmgr(/.*)?                                         u:object_r:netmgr_data_file:s0
