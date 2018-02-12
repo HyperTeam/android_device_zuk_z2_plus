@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
     camera.msm8996 \
     Snap
 
+# Charger
+PRODUCT_PACKAGES += \
+    chargeonlymode
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8996_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8996_camera.xml \
     $(LOCAL_PATH)/configs/camera/ov8865_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov8865_chromatix.xml \
