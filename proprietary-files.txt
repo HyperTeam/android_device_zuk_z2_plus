@@ -40,7 +40,7 @@ vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 
 # Bluetooth - from bardock - OPM1.171019.019
-vendor/bin/wcnss_filter|adee628bd5c48ab1ceb87fb3224fda1442760fb4
+vendor/bin/wcnss_filter|9a99d472b0c0f05c2a7bbfae065d535f4d89c46e
 vendor/lib64/libbtnv.so|21c928e2d68980008ce8d8d1312ded932e79768d
 vendor/lib/libbtnv.so|9bd5ce7d209f6fb511db72718487bc7d12c97b88
 
