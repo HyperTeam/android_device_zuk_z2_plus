@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
     memtrack.msm8996 \
     libqdMetaData.system \
     liboverlay \
-    libtinyxml
+    libtinyxml \
+    libvulkan
 
 # Display calibration
 PRODUCT_COPY_FILES += \
@@ -354,6 +355,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
+
+# VNDK
+PRODUCT_PACKAGES += \
+    vndk_package
 
 # Wifi
 PRODUCT_PACKAGES += \
