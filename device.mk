@@ -70,6 +70,10 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOTANIMATION_HALF_RES := true
 
+# Additional native libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
