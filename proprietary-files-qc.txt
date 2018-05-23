@@ -1,58 +1,31 @@
-# ADSP - from Xiaomi 8996
-bin/adsprpcd|0a866472f1424b6d12ffc69e12e533f708833144
-vendor/lib64/libadsprpc.so|013b3e95cf2a72dd8e70f304dd616adf621c4665
-vendor/lib64/libadsp_default_listener.so|73b9896619fa14cafdfde78e412ed3bc7e9ba0fe
-vendor/lib64/libfastcvadsp_stub.so|c3ed93ff7a09b15f4538ff8a60e0b4d8029d4cd0
-vendor/lib64/libfastcvopt.so|e825b92e096582ebcb5caa4c1cc73dc9d393266b
-vendor/lib/libadsprpc.so|92d637251fb8bd920e0103386819b7cfedfedcea
-vendor/lib/libadsp_default_listener.so|35f7febfd374d6f66bc68d51414bbd5c55f8f1b5
-vendor/lib/libadsp_hvx_callback_skel.so|c8edacf008a50e72adaff44358270fdba4475284
-vendor/lib/libadsp_hvx_stub.so|0c32f406076e664ac1cbcfa169ae9c391ccfbf88
-vendor/lib/libfastcvadsp_stub.so|9cb0c4550f087846cbc504e42793c0a5d534ffa9
-vendor/lib/libfastcvopt.so|63e464b6a967d1c05073afc4857096ab41e0464f
+# ADSP
+vendor/bin/adsprpcd
+vendor/lib/libadsprpc.so
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libfastcvadsp_stub.so
+vendor/lib/libfastcvopt.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libfastcvadsp_stub.so
 
-# ADSP modules - from Xiaomi 8996
-vendor/lib/rfsa/adsp/libadsp_fd_skel.so|5607a78451b621bb6399878ab58ba896c72797ab
-vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so|035272c1d77bcd04e3a838056d512964744c9322
-vendor/lib/rfsa/adsp/libadsp_hvx_skel.so|6a1d6ee55cc65d0f12f6a9bfd04823b46d2d6a24
-vendor/lib/rfsa/adsp/libadsp_hvx_stats.so|2f6abffe644ed918ff1a7e0e330f8e9c32add72c
-vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_BGGR.so|3f82d78a7c9e88c5fdc02dc0761349e4ab95abf8
-vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_RGGB.so|b21151ad414cd7310117fceb924a72fd20e97257
-vendor/lib/rfsa/adsp/libapps_mem_heap.so|fd362c6b0e30f62cc3fc4566855f46706d2c3c50
-vendor/lib/rfsa/adsp/libdspCV_skel.so|d74d8cb9ae706c6a9107e4b73c60a5ca38a52b09
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|34da083f967ebb641164f45eab9cf9550e02bb28
-vendor/lib/rfsa/adsp/libfastcvadsp.so|182b849c31855ba5afbeba51a788c8dd70f7d5f2
-vendor/lib/rfsa/adsp/libobjectMattingApp_skel.so|872c39fc77ad3d7d7a6afc67fba9e045013af6ce
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|a19ed6dba19d695c60d17baacfb30cf2ee518070
-vendor/lib/rfsa/adsp/libscveCleverCapture_skel.so|7c0fa42a783007161afe51d98b92a6857ca9fcbd
-vendor/lib/rfsa/adsp/libscveFaceRecognition_skel.so|e3cca34c0a0395584292dc5286b55de139840929
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|a50dc8be12853c8454d8608809eeb4fdbff19d9f
-vendor/lib/rfsa/adsp/libscveT2T_skel.so|4d95287730c68c8bdbca87b868eb0e33dde5adf1
-vendor/lib/rfsa/adsp/libscveTextReco_skel.so|65a415854bb21937c6b1fc760946790d77fef209
-vendor/lib/rfsa/adsp/libvpp_frc.so|a9db7a036c008da7a80f8fe860f88e319a01d0d0
-vendor/lib/rfsa/adsp/libvpp_svc_skel.so|1c4c6e8325f3a5d680c691cbb363d43790ea0816
-vendor/lib/rfsa/adsp/us-syncproximity.so|ed0e24d1029b90ef76a2e917646ef0195f724d0b
-
-# Audio libraries - from Xiaomi 8996
-vendor/lib64/soundfx/libqcbassboost.so|7c561f3940031007310027bfe55fe82749bc2730
-vendor/lib64/soundfx/libqcreverb.so|6b40dc3084c00b27dd8b5bd7c8ac51eb113e3e37
-vendor/lib64/soundfx/libqcvirt.so|ba2e37ed55790de40e300c076269ce1668a2beee
-vendor/lib64/libacdb-fts.so|9a87a0d3587e1c904d977683213cdca81f9e6e55
-vendor/lib64/libacdbloader.so|04480be96f4e62135d53465a1f6d4e3f36a45214
-vendor/lib64/libacdbrtac.so|a243e3dc3694e74b1127de68bd83196cb7d46ce2
-vendor/lib64/libadiertac.so|6b166170b4f4d3830f436949a3910b495f7e3783
-vendor/lib64/libaudcal.so|c733c8150c657ac67ffc45411811e890dd593774
-vendor/lib64/libaudiodevarb.so|1e5ff2a7660b383b65ce4839ce74e19f7c82ad06
-vendor/lib/soundfx/libqcbassboost.so|3d71050b8f95974089b6ef15d0c1c23a1a2b7aa1
-vendor/lib/soundfx/libqcreverb.so|c5992e7ce1a13252d9b3d33e0d8d88617e13147a
-vendor/lib/soundfx/libqcvirt.so|33dd0a6f5f8a8f2e7ae064bcc5f25eace9fda0ba
-vendor/lib/libadm.so|288c36170c6ad13e0e07ed759f3a111cbf21640e
-vendor/lib/libacdb-fts.so|35dadf88fdefab731240a011639de00dd8d9acbb
-vendor/lib/libacdbloader.so|72aa1889f72e20bd4efb155cb40389edb208243a
-vendor/lib/libacdbrtac.so|6ea6051c6474a594d8d6e09cf022b5d04385d0ee
-vendor/lib/libadiertac.so|aa78ec13e5e94a08c3c1bc2cce297235eafc57dc
-vendor/lib/libaudcal.so|d6889616d8016fb672b00078e99bf6b43f4bcd36
-vendor/lib/libaudiodevarb.so|a3e48e0b757a81877230a55ce33cbc22fd1b3f53
+# Audio libraries
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libadm.so
+vendor/lib/libaudcal.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbloader.so
+vendor/lib64/libacdbrtac.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcreverb.so
+vendor/lib64/soundfx/libqcvirt.so
 
 # Bluetooth - from Xiaomi 8996
 bin/wcnss_filter|19ffee438da7a6d6119f0c964d21f7b5f5c760ee
