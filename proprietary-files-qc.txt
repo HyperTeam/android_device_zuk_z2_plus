@@ -66,23 +66,13 @@ vendor/bin/dpmQmiMgr
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM and SEE - from Xiaomi 8996
-bin/qseecomd|3dcd9492721312a567fcf46b9b53dcf01ec9ba46
-vendor/bin/qseeproxydaemon|3802937f1dd409d1971577c1e1bac860bf96fea0
-vendor/lib64/lib-sec-disp.so|524b203da3027e02db8a556ba971e493ee0ddcc2
-vendor/lib64/libGPreqcancel.so|f1f04f22d2011b23c34cea9be4638a6cbb893da6
-vendor/lib64/libGPreqcancel_svc.so|1903e0a5067590b5230ef45a5367ff40e60aea57
-vendor/lib64/libQSEEComAPI.so|b96a7e0efc0bcec3119fd8ea5f26214201b4b20f
-vendor/lib64/libSecureUILib.so|dbf6c511b05636597ab197cea1241a91f0da6051
-vendor/lib64/libStDrvInt.so|6a9560bfc7c2ff14f65130249a237b089bccacee
-vendor/lib64/libdrmfs.so|1d3ab624c70da92546158d3af12c185e9f056f07
-vendor/lib64/libdrmtime.so|c7bad1c1e17516f6efe3b1d56d75a0e4a9a61677
-vendor/lib64/libqisl.so|524ed27413980653b2ff7497b4f166f1eba066bc
-vendor/lib64/librpmb.so|e952958912b667835c5e0583f06fcb1dd8301b1a
-vendor/lib64/libsecureui.so|e80ad4bddeba5e8348d483a0944dd7267d1f224f
-vendor/lib64/libsecureui_svcsock.so|94f6b8f5fb29a80432338c7ddf55c6e5ed212e35
-vendor/lib64/libssd.so|587cacfed3956235dd072fe7e6d1e768b3ad3961
-vendor/lib/libQSEEComAPI.so|58364393dc892ced5fb2252f269a45f731c89594
+# DRM and SEE - from bardock - OPM1.171019.019
+vendor/bin/qseecomd|d30e904ca073f310a3486a4431c891e2a56f08ee
+vendor/lib64/libQSEEComAPI.so|67a1dfa9aa6e1f47f873500bb84e56ffb98c6de9
+vendor/lib64/libdrmfs.so|e69a5f0b2835c9aa15e1f5dc21aa8755288b9867
+vendor/lib64/libdrmtime.so|9106e588ada083c061c44a62bc2cdf7d9123a745
+vendor/lib64/librpmb.so|13e932556c05dcf37b1c6f2038a670e239c56315
+vendor/lib64/libssd.so|baabf76b79866df9dabfd7761d7338e54757bc3f
 
 # Gatekeeper - from Xiaomi 8996
 vendor/lib64/hw/gatekeeper.msm8996.so|4ead5354896901918f102cb63b89522591814240
