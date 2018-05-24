@@ -364,13 +364,10 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 vendor/lib/libthermalclient.so
 
-# Time services - from Xiaomi 8996
--app/TimeService/TimeService.apk|91e347436fab5b834f7404e5397feaab12a8d733
-bin/time_daemon|8fd9be0fc3d3b08113de506d0f5f413159f6471d
-vendor/lib64/libTimeService.so|55d453d2b9926debd190b1a4a9a60f79a173e10e
--vendor/lib64/libtime_genoff.so|23f679bbc0ecc7d75f84212369049c27e8abbb7e
-vendor/lib/libTimeService.so|6d254a41d3ae2b13f54dfd9567a8de2195e05a37
--vendor/lib/libtime_genoff.so|84a909c91e585d73345f8e682441f7141ef27c8e
+# Time services - from bardock - OPM1.171019.019
+vendor/app/TimeService/TimeService.apk|5055619766db32fe499cda86b892c9f3081219c5
+vendor/bin/time_daemon|6f93ea342e94f70056c50795627fe4064b1c86c7
+vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
 # Widevine - from Xiaomi 8996
 vendor/lib/libWVStreamControlAPI_L3.so|61673304827483d44b735a3dd08f0783d10ce92d
