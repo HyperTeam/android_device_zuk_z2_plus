@@ -268,11 +268,10 @@ vendor/lib/libqti-iop-client.so|12c4e64e4fa3e0008af3c7efd708c0820fd090e1
 vendor/lib/libqti-iop.so|932e292ea9aad5a873626f50bdcdae49e63cffd9
 vendor/lib/libqti-perfd-client.so|8fe7083f1166d2a4850c533101d931ff1f4e975f
 
-# Peripheral manager - from Xiaomi 8996
-bin/pm-proxy|a8e0eca49d72c756d9f931eb4185b6a3d7b9275d
-bin/pm-service|b03fb5593549c80bb1bf7956779d3b8b86b0552a
-vendor/lib64/libperipheral_client.so|ce9db3de0d367d1643bc175e1accb67bd2085b41
-vendor/lib/libperipheral_client.so|3c1bc4e6d1f8fe99c0ad8ea56eb63dfab576d9bf
+# Peripheral manager
+vendor/bin/pm-proxy
+vendor/bin/pm-service
+vendor/lib64/libperipheral_client.so
 
 # Postprocessing - from Xiaomi 8996
 etc/permissions/com.qti.snapdragon.sdk.display.xml|bd2a3394bdd6ec4e94fa6a59e816a97e89940ab6
