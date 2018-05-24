@@ -233,26 +233,22 @@ vendor/lib/hw/sound_trigger.primary.msm8996.so|0b11dd542f2944f1cd6ec04eecfec8faf
 vendor/lib/libadpcmdec.so|8360005fd3c7d1842dc9de5b731d64e1392149ce
 vendor/lib/libsmwrapper.so|e3fb69e2252796f06b1e522000bff2cd1856c91f
 
-# Media - from Xiaomi 8996
-lib64/libOmxVpp.so|a59b67e845f3b4679e271e06937fa61d4be76756
-lib64/libvpplibrary.so|77bbff236e4381b26267de822478e54eb6cdc690
-lib/libOmxVpp.so|2d1c88f5c7db549d078c27da8337e1ea2f2e0b57
-lib/libvpplibrary.so|802d82d413748d426f323e14f038b27c0b46fc95
-vendor/lib64/libI420colorconvert.so|06870a5e61c7b962a1e2e1ed646a31590fc47482
-vendor/lib64/libOmxAacDec.so|2ae52dddf42b24cfc1dffa0859bace7014836e44
-vendor/lib64/libOmxEvrcDec.so|bc2839221637a3e13770dd3c72188bc643e0ec3c
-vendor/lib64/libOmxQcelp13Dec.so|288ae995ba6d872c8d5adc2646c8327b35ec7d34
-vendor/lib64/libmm-color-convertor.so|ee1c8a4250311a755407c5254c0c80e3a7db2f8c
-vendor/lib64/libmmosal.so|0aebca570a3e78f26c46acda3ec70193a3306239
-vendor/lib64/libvpphvx.so|14d6921eaac8e4b600afa05c83a085b4629e01ec
-vendor/lib/libI420colorconvert.so|5331b215f03403336cc466965176bded59b81b9a
-vendor/lib/libOmxAacDec.so|742dce3451266925848a03ad5073a65958e8b0c3
-vendor/lib/libOmxEvrcDec.so|9d2dbfa86958a2e2d0950dff3ec47cd76661a4f8
-vendor/lib/libOmxQcelp13Dec.so|f005f67777863e4ec7d7ca9048f9a1ca73f8af2f
-vendor/lib/libmm-color-convertor.so|e0e4d768826c146072663309cc1355d7af5d770f
-vendor/lib/libmmosal.so|20edfe2d88b21c371719baa0b6f27dc68ec775ad
-vendor/lib/libvpphvx.so|f4f43588db33cce8e19cebd0854ee299a9dd631a
-vendor/lib/libvqzip.so|48ff3407fa4bf5dccbd7a27e158acf3a5ebacf4b
+# Media - from bardock - OPM1.171019.019 
+-vendor/lib/libgpustats.so|6918887a8b766d09aeb83b45fa4ff8edeaefe750
+vendor/lib/libOmxAacDec.so|6ae10d04772efcca850e341426c2aff427f57146
+vendor/lib/libOmxAlacDec.so|c5a7ab4e56e155821652269eb56bece6d212515f
+vendor/lib/libOmxAlacDecSw.so|8038041d44ed6d5d894c1314cd645a2d4bfd21fe
+vendor/lib/libOmxAmrDec.so|43905449c9880de5997a9fafd9973010ce4e1f25
+vendor/lib/libOmxAmrwbplusDec.so|4ddf71dbaa88e2f6d7a15d709c3e07a48d58d034
+vendor/lib/libOmxApeDec.so|e89ed4ae3dff884130e4084008a6cf3b0af919bc
+vendor/lib/libOmxApeDecSw.so|a1355949eee14cd814e29b3c204b975744b8a49c
+vendor/lib/libOmxEvrcDec.so|bc06bdcd812e012541dc59a53cae3f1b8fbca250
+vendor/lib/libOmxQcelp13Dec.so|25c7f4a214b9fb18e006bb3368c032a73e9fc729
+vendor/lib/libOmxVpp.so|d02adddd5492125d00db71168f39fbb4b78fb921
+vendor/lib/libOmxWmaDec.so|7502022a2c4f71b84932afa479b3fb52deda60e6
+vendor/lib/libvpplibrary.so|a663db1732917360b0eb6955b1518326d8ffda53
+vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
+-vendor/lib64/libgpustats.so|60d5afa0c9bbbd11ee1b8d5d9470b8684a590da7
 
 # Perf - from Xiaomi 8996
 bin/energy-awareness|a09dee76c143ba16365cb9aaba7f6662a64194aa
