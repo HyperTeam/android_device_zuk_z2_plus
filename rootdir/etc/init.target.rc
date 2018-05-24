@@ -40,39 +40,24 @@ on fs
     swapon_all /vendor/etc/fstab.qcom
 
     mkdir /persist/data 0700 system system
-    mkdir /persist/bms 0700 root system
     restorecon_recursive /persist
 
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
 on post-fs-data
-    mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
-    mkdir /persist/data/sfs 0700 system system
-    mkdir /persist/data/tz 0700 system system
-    mkdir /data/misc/dts 0770 media audio
-    mkdir /data/misc/seemp 0700 system system
-    mkdir /data/usf 0700 system system
     mkdir /data/misc/qvop 0660 system system
-    mkdir /data/misc/audio_pp 0771 media audio
 
 on property:init.svc.bootanim=running
     write /sys/class/leds/wled/brightness 4095
 
 on boot
     start rmt_storage
-    start rfs_access
-# access permission for secure touch
-    chmod 0660 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
-    chmod 0440 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
-    chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
-    chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
     write /proc/sys/kernel/sched_boost 1
-    write /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input0/update_fw 1
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
