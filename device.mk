@@ -21,6 +21,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
 
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8996
+
+# QMI
+PRODUCT_PACKAGES += \
+    libjson
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -40,6 +48,12 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.zuk.rc \
     ueventd.qcom.rc
+
+# RIL
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    libxml2 \
+    libprotobuf-cpp-full
 
 # Call the proprietary setup
 $(call inherit-product, vendor/zuk/z2_plus/z2_plus-vendor.mk)
