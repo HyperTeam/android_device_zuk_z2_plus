@@ -16,31 +16,26 @@
 
 LOCAL_PATH := device/zuk/z2_plus
 
+# Platform
 TARGET_BOARD_PLATFORM := msm8996
-# This value will be shown on fastboot menu
-TARGET_BOOTLOADER_BOARD_NAME := QC_Reference_Phone
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 
+# Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-#TARGET_CPU_VARIANT := kryo
 TARGET_CPU_VARIANT := kryo
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-ifneq ($(TARGET_USES_AOSP), true)
-TARGET_2ND_CPU_VARIANT := cortex-a53
-else
-TARGET_2ND_CPU_VARIANT := cortex-a9
-endif
+TARGET_2ND_CPU_VARIANT := kryo
 
-TARGET_NO_BOOTLOADER := false
-TARGET_NO_KERNEL := false
-BOOTLOADER_GCC_VERSION := arm-eabi-4.8
-BOOTLOADER_PLATFORM := msm8996 # use msm8996 LK configuration
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8996
+TARGET_NO_BOOTLOADER := true
 
 TARGET_USES_OVERLAY := true
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
