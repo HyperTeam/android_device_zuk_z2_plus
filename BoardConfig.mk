@@ -145,9 +145,6 @@ ifeq ($(HOST_OS),linux)
     endif
 endif
 
-# Enable sensor multi HAL
-USE_SENSOR_MULTI_HAL := true
-
 # Enable build with MSM kernel
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
@@ -166,6 +163,9 @@ TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 HAVE_SYNAPTICS_DSX_FW_UPGRADE := true
 
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
+
+# Sensors
+USE_SENSOR_MULTI_HAL := true
 
 # Timeservice
 BOARD_USES_QC_TIME_SERVICES := true
