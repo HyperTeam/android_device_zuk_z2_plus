@@ -48,13 +48,16 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_BTNV := true
 QCOM_BT_USE_SMD_TTY := true
 
+# Camera
+BOARD_QTI_CAMERA_32BIT_ONLY := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+
 TARGET_USES_OVERLAY := true
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 QTI_S3D := true # Enable S3D GPU compostion
 
 BOARD_USES_GENERIC_AUDIO := true
-USE_CAMERA_STUB := true
 
 USE_CLANG_PLATFORM_BUILD := true
 
@@ -128,7 +131,6 @@ TARGET_USES_IMS := true
 #Enable PD locater/notifier
 TARGET_PD_SERVICE_ENABLED := true
 
-BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_BOOTIMG_SIGNED := true
 
 # Enable dex pre-opt to speed up initial boot
