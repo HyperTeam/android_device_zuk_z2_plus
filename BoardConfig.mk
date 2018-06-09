@@ -139,6 +139,7 @@ endif
 
 # Gps
 TARGET_NO_RPC := true
+USE_DEVICE_SPECIFIC_GPS := true
 
 # Media
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
