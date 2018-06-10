@@ -120,7 +120,18 @@ PRODUCT_PACKAGES += \
 
 # Gps
 PRODUCT_PACKAGES += \
+    gps.msm8996 \
+    libgnsspps \
     libcurl
+
+PRODUCT_PACKAGES += \
+    apdr.conf \
+    flp.conf \
+    gps.conf \
+    izat.conf \
+    lowi.conf \
+    sap.conf \
+    xtwifi.conf
 
 # IRQ
 PRODUCT_COPY_FILES += \
