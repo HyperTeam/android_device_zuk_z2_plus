@@ -142,165 +142,31 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
-service mdm_launcher /system/bin/sh init.mdm.sh
-     class core
-     oneshot
-
-service mdm_helper /system/bin/mdm_helper
-     class core
-     group root system
-     disabled
-## Allow usb charging to be disabled peristently
-#on property:persist.usb.chgdisabled=1
-#    write /sys/class/power_supply/battery/charging_enabled 0
-#
-#on property:persist.usb.chgdisabled=0
-#    write /sys/class/power_supply/battery/charging_enabled 1
-#
-#service qrngd /system/bin/qrngd -f
-#   class main
-#   user root
-#   group root
-#
-#service qrngp /system/bin/qrngp
-#    class main
-#    user root
-#    group root
-#    oneshot
-#    disabled
-#
-#on property:sys.boot_completed=1
-#    start qrngp
-
 service qseecomd /system/bin/qseecomd
-   class core
-   user root
-   group root
+    class core
+    user root
+    group root
 
-service gamed /system/vendor/bin/gamed
-   class main
-   user system
-   group system
-   disabled
-   socket gamed seqpacket 0640 system system
-
-service seempd /system/bin/seempd
-   class late_start
-   user system
-   group system
-   socket seempdw dgram 0666 system system
-
-service secotad /system/bin/secotad
-   class late_start
-   user system
-   group system
-
-#service mpdecision /system/bin/mpdecision --avg_comp
-#   user root
-#   disabled
-#
-#service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
-#   user system
-#   group system
-#   disabled
-#
 service thermal-engine /system/vendor/bin/thermal-engine
-   class main
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-   group root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-
-#service security-check1 /sbin/security_boot_check system
-#    class core
-#    oneshot
-#
-#service security-check2 /sbin/security_boot_check recovery
-#    class core
-#    oneshot
-#
-service time_daemon /system/bin/time_daemon
-   class late_start
-   user root
-   group root
+    class main
+    user root
+    socket thermal-send-client stream 0666 system system
+    socket thermal-recv-client stream 0660 system system
+    socket thermal-recv-passive-client stream 0666 system system
+    group root
+    socket thermal-send-client stream 0666 system system
+    socket thermal-recv-client stream 0660 system system
+    socket thermal-recv-passive-client stream 0666 system system
 
 service adsprpcd /system/bin/adsprpcd
-   class main
-   user media
-   group media
+    class main
+    user media
+    group media
 
 service audiod /system/bin/audiod
-   class late_start
-   user system
-   group system
-
-
-service usf_tester /system/bin/usf_tester
-    user system
-    group system inet
-    disabled
-    oneshot
-
-service usf_epos /system/bin/usf_epos
-    class main
-    user system
-    group system inet
-    disabled
-    oneshot
-
-service usf_gesture /system/bin/usf_gesture
-    user system
-    group system inet
-    disabled
-    oneshot
-
-service usf_sync_gesture /system/bin/usf_sync_gesture
-    user system
-    group system inet audio
-    disabled
-    oneshot
-
-service usf_p2p /system/bin/usf_p2p
-    user system
-    group system inet
-    disabled
-    oneshot
-
-service usf_hovering /system/bin/usf_hovering
-    user system
-    group system inet
-    disabled
-    oneshot
-
-service usf_proximity /system/bin/usf_proximity
     class late_start
     user system
-    group system inet audio
-
-service usf_pairing /system/bin/usf_pairing
-    user system
-    group system inet
-    disabled
-    oneshot
-
-service usf_sw_calib /system/bin/usf_sw_calib
-    user system
-    group system inet
-    disabled
-    oneshot
-
-service usf-post-boot /system/bin/sh /system/etc/usf_post_boot.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-
-on property:init.svc.bootanim=stopped
-    start usf-post-boot
+    group system
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
@@ -315,57 +181,25 @@ service imsdatadaemon /system/bin/imsdatadaemon
     group system wifi radio inet log diag
     disabled
 
-service pd_mapper /system/vendor/bin/pd-mapper
-     class core
-     disabled
-
-on property:persist.sys.pd_enable=1
-     start pd_mapper
-     write /sys/class/service_locator/service_locator_status 1
-
-on property:persist.sys.pd_enable=0
-     write /sys/class/service_locator/service_locator_status 0
-
-#
-## QCA1530 SoC late_start group trigger
-#service gnss-init /system/vendor/bin/gnss.qca1530.sh init
-#   class late_start
-#   oneshot
-#
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
-   class main
-   user system
-   socket ims_rtpd stream 0660 system radio
-   group radio diag inet log
-   disabled
-
-service imscmservice /system/bin/imscmservice
-   class main
-   user system
-   group radio diag inet log
-   disabled
-
-on property:sys.ims.DATA_DAEMON_STATUS=1
-   start ims_rtp_daemon
-   start imscmservice
-
-service dts_configurator /system/bin/dts_configurator
-    class late_start
+    class main
     user system
-    group system media audio
-    oneshot
-
-service dtseagleservice /system/bin/dts_eagle_service
-    class late_start
-    user system
-    group audio media
+    socket ims_rtpd stream 0660 system radio
+    group radio diag inet log
     disabled
 
-on property:init.svc.dts_configurator=stopped
-    start dtseagleservice
+service imscmservice /system/bin/imscmservice
+    class main
+    user system
+    group radio diag inet log
+    disabled
+
+on property:sys.ims.DATA_DAEMON_STATUS=1
+    start ims_rtp_daemon
+    start imscmservice
 
 service ppd /system/vendor/bin/mm-pp-dpps
     class late_start
@@ -392,11 +226,6 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
-service tlocd /system/bin/tloc_daemon
-    class late_start
-    user system
-    group drmrpc gps net_raw
-
 service energy-awareness /system/bin/energy-awareness
     class main
     user root
@@ -409,9 +238,9 @@ service hvdcp_opti /system/bin/hvdcp_opti
     group root
 
 service mdtpd /system/vendor/bin/mdtpd
-   class late_start
-   user root
-   group system radio drmrpc
+    class late_start
+    user root
+    group system radio drmrpc
 
 on charger
     write /sys/devices/system/cpu/cpu2/online 0
@@ -420,13 +249,3 @@ on charger
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
     start hvdcp_opti
-
-service dhcpcd_eth0 /system/bin/dhcpcd -ABKLG
-	class late_start
-	disabled
-	oneshot
-
-service iprenew_eth0 /system/bin/dhcpcd -n
-	class late_start
-	disabled
-	oneshot

@@ -25,13 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#
-
-import /init.log.rc
 
 on boot
-    insmod  /system/lib/modules/texfat.ko
-    insmod  /system/lib/modules/tntfs.ko
 
 on init
     symlink /data/local /local
@@ -61,36 +56,11 @@ on init
     # BEGIN cuigq1 20160127 add for ZBROW-185 hotswap gpio
     write /sys/class/gpio/export 108
 
-#add for launcher layout db by xingqx
-    chmod 0666 /system/etc/launcher.db
-
 #added touch gesture wake node permission
     chown system /sys/devices/virtual/touch/tp_dev/gesture_on
 
-#for factory properties
-service wcg_mac_tool /sbin/wcg_mac_tool
-	class late_start
-	user root
-	disabled
-	oneshot
-	seclabel u:r:wpa:s0
-
-#FIDO service 
-service fidoca /system/vendor/bin/fidoca
-    class main
-    user system
-    group system
-
-
-#START IFAA service
-service ifaad /system/bin/ifaad
-	class late_start
-	user system
-	group system
-
 on property:sys.boot_completed=1
-	start wcg_mac_tool
-	write /sys/class/leds/wled/brightness 0
+    write /sys/class/leds/wled/brightness 0
 
 # It's set in "bootanimation_main.cpp" when shutdown charging.
 # service "qcom-post-boot" is defined in [init.qcom.rc] on Qcom platform for CPU frequence configuration.
