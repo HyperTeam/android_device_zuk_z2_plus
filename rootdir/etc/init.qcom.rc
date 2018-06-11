@@ -216,7 +216,6 @@ on post-fs-data
 
     #create port-bridge log dir
     mkdir /data/misc/port_bridge 0770 radio radio
-    chmod 0770 /data/misc/port_bridge
 
     #create netmgr log dir
     mkdir /data/misc/netmgr 0770 radio radio
@@ -239,9 +238,6 @@ on post-fs-data
     # Create directory for audio delta files
     mkdir /data/misc/audio/acdbdata 0770 media audio
     mkdir /data/misc/audio/acdbdata/delta 0770 media audio
-
-    # Create directory used by the DASH client
-    mkdir /data/misc/dash 0770 media audio
 
     # Create directory used by display clients
     mkdir /data/misc/display 0770 system graphics
@@ -438,19 +434,6 @@ service config_bt_addr /system/bin/btnvtool -O
     user bluetooth
     group bluetooth radio
     oneshot
-
-service hciattach /system/bin/hci_qcomm_init -e
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-on property:bluetooth.hciattach=true
-    start hciattach
-
-on property:bluetooth.hciattach=false
-    setprop bluetooth.status off
 
 service netmgrd /system/bin/netmgrd
     class main

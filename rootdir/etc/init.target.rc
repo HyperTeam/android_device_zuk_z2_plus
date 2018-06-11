@@ -58,9 +58,7 @@ on post-fs-data
     mkdir /data/misc/dts 0770 media audio
     mkdir /data/misc/seemp 0700 system system
     mkdir /data/usf 0700 system system
-    mkdir /data/misc/tloc/ 0700 system drmrpc
     mkdir /data/misc/qvop 0660 system system
-    mkdir /data/misc/qvr 0770 system system
     mkdir /data/misc/audio_pp 0771 media audio
 
 on property:init.svc.bootanim=running
@@ -89,21 +87,10 @@ service fingerprintd /system/bin/fingerprintd
     user system
     group system
 
-service qfp-daemon /system/bin/qfp-daemon
-    class late_start
-    user system
-    group system drmrpc diag
-
 service qvop-daemon /system/bin/qvop-daemon
     class late_start
     user system
     group system drmrpc
-
-service qvrd /system/vendor/bin/qvrservice
-    class late_start
-    user system
-    group system camera graphics
-    socket qvrservice stream 0666 system system
 
 #Start up peripheral manager
 service per_mgr system/bin/pm-service
@@ -218,11 +205,6 @@ service hvdcp_opti /system/bin/hvdcp_opti
     class main
     user root
     group root
-
-service mdtpd /system/vendor/bin/mdtpd
-    class late_start
-    user root
-    group system radio drmrpc
 
 on charger
     write /sys/devices/system/cpu/cpu2/online 0
