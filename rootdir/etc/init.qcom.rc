@@ -102,6 +102,9 @@ on boot
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
+    # Create hvdcp_opti directory
+    mkdir /persist/hvdcp_opti 0770 root system
+
     #enable camera read sensors data
     setprop persist.camera.gyro.disable 0
 
