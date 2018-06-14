@@ -42,9 +42,9 @@ setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 # Copyright headers and guards
 write_headers
 
-# Blobs for TWRP data decryption
-cat << EOF >> "$BOARDMK"
-EOF
+write_makefiles "$MY_DIR"/proprietary-files.txt
+
+write_makefiles "$MY_DIR"/proprietary-files-qc.txt
 
 # Finish
 write_footers
