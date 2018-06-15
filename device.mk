@@ -119,6 +119,9 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtinyxml
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/calib.cfg:system/etc/calib.cfg
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd
