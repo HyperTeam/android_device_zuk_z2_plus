@@ -40,9 +40,6 @@ static struct light_state_t g_attention;
 static struct light_state_t g_notification;
 static struct light_state_t g_battery;
 
-#define BACK_BUTTON_BRIGHTNESS_FILE "/sys/class/leds/button-backlight/brightness"
-#define MENU_BUTTON_BRIGHTNESS_FILE "/sys/class/leds/button-backlight1/brightness"
-
 #define LCD_BRIGHTNESS_FILE "/sys/class/leds/lcd-backlight/brightness"
 #define LCD_MAX_BRIGHTNESS_FILE "/sys/class/leds/lcd-backlight/max_brightness"
 
@@ -199,22 +196,6 @@ static int set_light_backlight(struct light_device_t* dev,
 
     pthread_mutex_lock(&g_lock);
     err = write_int(LCD_BRIGHTNESS_FILE, brightness);
-    pthread_mutex_unlock(&g_lock);
-    return err;
-}
-
-static int set_light_buttons(struct light_device_t *dev,
-        const struct light_state_t *state)
-{
-    int err = 0;
-    int brightness = rgb_to_brightness(state);
-
-    if (!dev)
-        return -1;
-
-    pthread_mutex_lock(&g_lock);
-    err = write_int(BACK_BUTTON_BRIGHTNESS_FILE, brightness) +
-            write_int(MENU_BUTTON_BRIGHTNESS_FILE, brightness);
     pthread_mutex_unlock(&g_lock);
     return err;
 }
@@ -421,8 +402,6 @@ static int open_lights(const struct hw_module_t* module, char const* name,
 
     if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
         set_light = set_light_backlight;
-    else if (0 == strcmp(LIGHT_ID_BUTTONS, name))
-        set_light = set_light_buttons;
     else if (0 == strcmp(LIGHT_ID_BATTERY, name))
         set_light = set_light_battery;
     else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
