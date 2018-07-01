@@ -124,7 +124,7 @@ PRODUCT_COPY_FILES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    XiaomiDoze
+    ZukDoze
 
 # Fingerprint
 PRODUCT_PACKAGES += \
