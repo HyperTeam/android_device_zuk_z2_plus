@@ -33,13 +33,6 @@ else
     platformid=`cat /sys/devices/system/soc/soc0/id`
 fi
 
-start_msm_irqbalance()
-{
-	if [ -f /vendor/bin/msm_irqbalance ]; then
-		start vendor.msm_irqbalance
-	fi
-}
-
 baseband=`getprop ro.baseband`
 echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
 

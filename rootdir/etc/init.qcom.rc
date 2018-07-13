@@ -453,13 +453,6 @@ service charger /charger
     seclabel u:r:charger:s0
     writepid /dev/cpuset/system-background/tasks
 
-service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
-    class core
-    user root
-    group root
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
 on property:init.svc.surfaceflinger=restarting
     stop hwcomposer-2-1
     start hwcomposer-2-1
