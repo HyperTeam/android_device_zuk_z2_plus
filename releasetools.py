@@ -32,4 +32,18 @@ def AddTrustZoneAssertion(info):
     if len(versions) and '*' not in versions:
       cmd = 'assert(qcom.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1" || abort("Your firmware is incompatible with this ROM version. Please update it to newest available version"););'
       info.script.AppendExtra(cmd)
+  m = re.search(r'require\s+version-min-trustzone\s*=\s*(\S+)', android_info)
+  if m:
+    versions = m.group(1).split('|')
+    if len(versions) and '*' not in versions:
+      cmd = 'assert(qcom.verify_min_trustzone(' + ','.join(['"%s"' % tz for 
+tz in versions]) + ') == "1");'
+      info.script.AppendExtra(cmd)
+  m = re.search(r'require\s+version-max-trustzone\s*=\s*(\S+)', android_info)
+  if m:
+    versions = m.group(1).split('|')
+    if len(versions) and '*' not in versions:
+      cmd = 'assert(qcom.verify_max_trustzone(' + ','.join(['"%s"' % tz for 
+tz in versions]) + ') == "1");'
+      info.script.AppendExtra(cmd)
   return

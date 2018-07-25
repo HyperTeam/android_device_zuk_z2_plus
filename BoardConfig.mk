@@ -148,6 +148,7 @@ DEVICE_MATRIX_FILE := $(LOCAL_PATH)/compatibility_matrix.xml
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_z2_plus
 TARGET_RECOVERY_DEVICE_MODULES := libinit_z2_plus
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
