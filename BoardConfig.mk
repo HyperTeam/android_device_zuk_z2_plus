@@ -50,7 +50,7 @@ TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/zuk/msm8996
-TARGET_KERNEL_CONFIG := msm_defconfig
+TARGET_KERNEL_CONFIG := msm-perf_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
@@ -101,8 +101,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-BOARD_HARDWARE_CLASS += device/zuk/z2_plus/cmhw
-
 # CNE and DPM
 BOARD_USES_QCNE := true
 
@@ -152,6 +150,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_z2_plus
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
+
+# Lineage Hardware
+BOARD_HARDWARE_CLASS += device/zuk/z2_plus/lineagehw
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
