@@ -54,7 +54,18 @@ on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
-    exec u:r:qti_init_shell:s0 -- /init.qcom.early_boot.sh
+
+    # Graphics
+    chown system graphics /sys/class/graphics/fb0/idle_time
+    chmod 0664 /sys/class/graphics/fb0/idle_time
+    chown system graphics /sys/class/graphics/fb0/dyn_pu
+    chmod 0664 /sys/class/graphics/fb0/dyn_pu
+    chown system graphics /sys/class/graphics/fb0/modes
+    chmod 0664 /sys/class/graphics/fb0/modes
+    chown system graphics /sys/class/graphics/fb0/mode
+    chmod 0664 /sys/class/graphics/fb0/mode
+    chown system graphics /sys/class/graphics/fb0/msm_cmd_autorefresh_en
+    chmod 0664 /sys/class/graphics/fb0/msm_cmd_autorefresh_en
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -346,6 +357,13 @@ on post-fs-data
     mkdir /data/misc/qti-logkit/socket-public/ 2750 system oem_2901
     mkdir /data/misc/qti-logkit/logdata/ 2750 system shell
 
+    # SSC/SLPI sensors
+    chmod 0755 /persist/sensors
+    chown 0664 /persist/sensors/sensors_settings
+    chmod system root /persist/sensors/sensors_settings
+    mkdir /data/misc/sensors
+    chmod 0775 /data/misc/sensors
+
     #Create SWAP related dirs
     mkdir /data/system/swap 0770 root system
     chmod 2770 /data/system/swap
@@ -526,16 +544,6 @@ service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     oneshot
-
-service sensor-sh /system/bin/sh /init.qcom.sensors.sh
-    class core
-    user root
-    oneshot
-
-service atfwd /system/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
 
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)

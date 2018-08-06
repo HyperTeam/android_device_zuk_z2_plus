@@ -288,10 +288,8 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.early_boot.sh \
     init.qcom.rc \
     init.qcom.power.rc \
-    init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
