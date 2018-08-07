@@ -154,9 +154,6 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lineage Hardware
 BOARD_HARDWARE_CLASS += device/zuk/z2_plus/lineagehw
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Media
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 TARGET_USES_MEDIA_EXTENSIONS := true
