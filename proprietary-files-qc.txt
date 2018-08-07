@@ -74,9 +74,8 @@ vendor/lib64/libdrmtime.so|9106e588ada083c061c44a62bc2cdf7d9123a745
 vendor/lib64/librpmb.so|13e932556c05dcf37b1c6f2038a670e239c56315
 vendor/lib64/libssd.so|baabf76b79866df9dabfd7761d7338e54757bc3f
 
-# Gatekeeper - from Xiaomi 8996
-vendor/lib64/hw/gatekeeper.msm8996.so|4ead5354896901918f102cb63b89522591814240
-vendor/lib/hw/gatekeeper.msm8996.so|de319e00f38d238254776aefac09da2e9c8753ef
+# Gatekeeper
+vendor/lib64/hw/gatekeeper.msm8996.so
 
 # GPS - from bardock - OPM1.171019.019
 vendor/bin/hw/vendor.qti.gnss@1.0-service|bdf23fe2af07c2afb74721023431446104fd828d
@@ -214,9 +213,8 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 # IPA - from Xiaomi 8996
 bin/ipacm-diag|98865614967aa21a17bbd4c803b3a2c70f8a95de
 
-# Keystore - from Xiaomi 8996
-vendor/lib64/hw/keystore.msm8996.so|e4e2f463b13bbb03e90101b86e1c1864c849d5f9
-vendor/lib/hw/keystore.msm8996.so|ba946127dad0a60fb02a854f315915de0fccaa0d
+# Keystore
+vendor/lib64/hw/keystore.msm8996.so
 
 # Listen - from Xiaomi 8996
 vendor/lib/hw/sound_trigger.primary.msm8996.so|0b11dd542f2944f1cd6ec04eecfec8fafd8ac8be
@@ -360,11 +358,11 @@ vendor/lib/libsensor_user_cal.so|28639fd686663b1e9a40de5c8ebdb8ac40ce70eb
 vendor/lib/sensors.oem.so|1ed02aa944c5bcdf706d8cab1dd6f924640aa539
 vendor/lib/sensors.ssc.so|a6e1272ec4c6ea7a41fb65093bbfdc99951d2080
 
-# Thermal - from Xiaomi 8996
-vendor/bin/thermal-engine|f87dd578a044b3f7806e6aab93a53b7c68c145e8
--vendor/lib64/libthermalclient.so|ebffb4d72142ac6a4c828d787026a8f6c741d211
-vendor/lib64/libthermalioctl.so|be0c236b6f5e4594c54eaefa2961cfb9692fc327
--vendor/lib/libthermalclient.so|cad864aac104c21a1957e3e05b2d4c958ee48db8
+# Thermal
+vendor/bin/thermal-engine
+vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalioctl.so
+vendor/lib/libthermalclient.so
 
 # Time services - from Xiaomi 8996
 -app/TimeService/TimeService.apk|91e347436fab5b834f7404e5397feaab12a8d733
@@ -379,5 +377,5 @@ vendor/lib/libWVStreamControlAPI_L3.so|61673304827483d44b735a3dd08f0783d10ce92d
 vendor/lib/libwvdrm_L3.so|7e77482481197997294a834bfbc817a01b6075cd
 vendor/lib/mediadrm/libwvdrmengine.so|c2199998c12f0f298be0b3f82eaac7e299a0feaa
 
-# WiFi - from Xiaomi 8996
-bin/cnss-daemon|218cac7af1a79d3b751a52bc47e01cdec2d15c37
+# WiFi
+vendor/bin/cnss-daemon
