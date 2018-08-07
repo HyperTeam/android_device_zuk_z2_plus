@@ -44,8 +44,8 @@ etc/firmware/rampatch_tlv_2.1.tlv|3f7e5271b40e581af603bb1093ccb2b058c83e82
 etc/firmware/rampatch_tlv_3.0.tlv|5f8120ea99ec8462f5ee21a29e0b290a031524c0
 etc/firmware/rampatch_tlv_3.2.tlv|1c934123b0571803cb3404a0d884fdf97241d0cb
 
-# Charger - from Xiaomi 8996
-bin/hvdcp_opti|c8e21a508b6acb3b7db94ff59ec9fa03b22a9545
+# Charger
+vendor/bin/hvdcp_opti
 
 # CNE
 -priv-app/CNEService/CNEService.apk
@@ -164,17 +164,17 @@ vendor/lib64/libtinyxml2_1.so|5ffb12fd2162910fc95be463fcde04ab5c427045
 vendor/lib/hw/vulkan.msm8996.so|0b69fd00ce1e3da65105e57b35ef17c78fe103d2
 vendor/lib64/hw/vulkan.msm8996.so|f4aa9246941c864ab186910e6ccff844b70e5c19
 
-# Graphics firmware - from Xiaomi 8996
-etc/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
-etc/firmware/a530_pfp.fw|448f9db8271fefb08348cbc50409e8e95bd93f78
-etc/firmware/a530_pm4.fw|5741a28752355b478d455635bab008028ff7e1c6
-etc/firmware/a530_zap.b02|657ce04bbb8cc88ccead7c22ed1e3ca1776c7518
-etc/firmware/a530_zap.mdt|cb197672d7d6f37817ddd4cbf59144db6e787f06
-etc/firmware/a530v1_pfp.fw|0864291b99bed712edfcffa94be7b4595d3af306
-etc/firmware/a530v1_pm4.fw|6a82a4fb4035fa2a933c1a26b5535d7ec7c0ac4c
-etc/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
-etc/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
-etc/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
+# Graphics firmware
+vendor/firmware/a530_gpmu.fw2
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+vendor/firmware/a530_zap.b02
+vendor/firmware/a530_zap.mdt
+vendor/firmware/a530v1_pfp.fw
+vendor/firmware/a530v1_pm4.fw
+vendor/firmware/a530v2_seq.fw2
+vendor/firmware/a530v3_gpmu.fw2
+vendor/firmware/a530v3_seq.fw2
 
 # IMS
 -app/ims/ims.apk
@@ -210,16 +210,16 @@ vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
-# IPA - from Xiaomi 8996
-bin/ipacm-diag|98865614967aa21a17bbd4c803b3a2c70f8a95de
+# IPA
+vendor/bin/ipacm-diag
 
 # Keystore
 vendor/lib64/hw/keystore.msm8996.so
 
-# Listen - from Xiaomi 8996
-vendor/lib/hw/sound_trigger.primary.msm8996.so|0b11dd542f2944f1cd6ec04eecfec8fafd8ac8be
-vendor/lib/libadpcmdec.so|8360005fd3c7d1842dc9de5b731d64e1392149ce
-vendor/lib/libsmwrapper.so|e3fb69e2252796f06b1e522000bff2cd1856c91f
+# Listen
+vendor/lib/hw/sound_trigger.primary.msm8996.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libsmwrapper.so
 
 # Media - from bardock - OPM1.171019.019 
 -vendor/lib/libgpustats.so|6918887a8b766d09aeb83b45fa4ff8edeaefe750
@@ -343,20 +343,20 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
 vendor/radio/qcril_database/qcril.db
 
-# Sensors - from Xiaomi 8996
-bin/sensors.qcom|b2ae9c8419fea4530e7074093f7043f4cfc00b90
-vendor/lib64/hw/activity_recognition.msm8996.so|9f044eded11927acfe0869e9ecbbcfb32c2bce8c
-vendor/lib64/libsensor1.so|21818c610a3235cd6e9899d583238ee82f1da855
-vendor/lib64/libsensor_reg.so|21343450fa3da05a35395ff72f7a43cc75e2fb81
-vendor/lib64/libsensor_user_cal.so|0a623b1d79cab0ff66e4f8ac2e885a9e8fad432d
-vendor/lib64/sensors.oem.so|daab9b35adb7b9c21c65460bb43b7156c99fd42c
-vendor/lib64/sensors.ssc.so|c1d9182cbfb8d0b881fbe6f36a8e031030b8862a
-vendor/lib/hw/activity_recognition.msm8996.so|be04aa26ae6ff1e508859ec359f1677ddf69a7c2
-vendor/lib/libsensor1.so|1810d6db76fe63e5a28f417347c6e682913b5cc9
-vendor/lib/libsensor_reg.so|bf452382b556cddba275159ac078df47bb1acdda
-vendor/lib/libsensor_user_cal.so|28639fd686663b1e9a40de5c8ebdb8ac40ce70eb
-vendor/lib/sensors.oem.so|1ed02aa944c5bcdf706d8cab1dd6f924640aa539
-vendor/lib/sensors.ssc.so|a6e1272ec4c6ea7a41fb65093bbfdc99951d2080
+# Sensors
+vendor/bin/sensors.qcom
+vendor/lib/hw/activity_recognition.msm8996.so
+vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
+vendor/lib/sensor_calibrate.so
+vendor/lib/sensors.ssc.so
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib64/hw/activity_recognition.msm8996.so
+vendor/lib64/libsensor1.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/sensor_calibrate.so
+vendor/lib64/sensors.ssc.so
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Thermal
 vendor/bin/thermal-engine
