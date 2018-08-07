@@ -282,16 +282,8 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
-# Postprocessing - from Xiaomi 8996
-etc/permissions/com.qti.snapdragon.sdk.display.xml|bd2a3394bdd6ec4e94fa6a59e816a97e89940ab6
-framework/com.qti.snapdragon.sdk.display.jar|e6387246d96376fd832fdcf14b65e149b6333bb2
--vendor/app/colorservice/colorservice.apk|908be5d636fd96177d522daac21bea3d13db6060
-vendor/bin/mm-pp-dpps|fc71b1148ae11b4365d2518bf4a048014fe427cc
-vendor/lib64/libdisp-aba.so|8bef22465e06213003a5d74809ad9b668e5921ac
-
-# tissot - from OPR1.170623.026
-etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 # QMI
+etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 etc/permissions/qti_permissions.xml
 vendor/bin/irsc_util
 vendor/lib/libdiag.so
