@@ -59,13 +59,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
-    persist.panel.inversemounted=1 \
     ro.qcom.ad=1 \
     ro.qcom.ad.calib.data=/vendor/etc/calib.cfg \
     ro.qcom.ad.sensortype=2 \
     ro.qualcomm.cabl=2 \
     ro.opengles.version=196610 \
-    ro.panel.mountflip=3 \
     ro.sf.lcd_density=480 \
     sdm.perf_hint_window=50 \
     sdm.debug.disable_rotator_split=1
