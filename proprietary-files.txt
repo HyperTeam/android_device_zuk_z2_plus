@@ -45,10 +45,16 @@ vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 
-# Bluetooth - from bardock - OPM1.171019.019
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/bin/wcnss_filter|9a99d472b0c0f05c2a7bbfae065d535f4d89c46e
-vendor/lib64/libbtnv.so|21c928e2d68980008ce8d8d1312ded932e79768d
-vendor/lib/libbtnv.so|9bd5ce7d209f6fb511db72718487bc7d12c97b88
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libbt-hidlclient.so
+
+# Bluetooth (shared dependencies)
+vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 
 # Camera
 lib/libjni_filtergenerator.so:vendor/lib/libjni_filtergenerator.so
