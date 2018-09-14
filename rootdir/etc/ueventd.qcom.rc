@@ -53,7 +53,12 @@
 /dev/smd11                0660   radio      radio
 
 #permsissions for BT/FM
+/dev/smd2                 0660   bluetooth  bluetooth
+/dev/smd3                 0660   bluetooth  bluetooth
 /dev/btpower              0660   bluetooth  system
+
+#permissions for pta
+/dev/pta                  0660   system     system
 
 /dev/radio0               0640   system     system
 /dev/rfcomm0              0660   bluetooth  bluetooth
@@ -113,6 +118,7 @@
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
 /dev/qseecom              0660   system     drmrpc
+/dev/smcinvoke            0660   system     system
 /dev/qsee_ipc_irq_spss    0660   system     drmrpc
 /dev/seemplog             0660   system     system
 /dev/pft                  0660   system     drmrpc
@@ -134,6 +140,7 @@
 /dev/wcnss_ctrl           0660   system     system
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
+/dev/spidev0.0            0660   system     audio
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
@@ -176,8 +183,6 @@
 /dev/msm_preproc_ctl      0660   system     audio
 /dev/msm_rtac             0660   system     audio
 /dev/msm_voicememo        0660   system     audio
-/dev/smd3                 0660   bluetooth  bluetooth
-/dev/smd2                 0660   bluetooth  bluetooth
 /dev/ttyHSL1              0660   system     system
 /dev/ttyHS1               0660   system     system
 /dev/mdm                  0660   system     radio
@@ -186,6 +191,7 @@
 /dev/tty_sdio_00          0660   system     system
 /dev/ttyGS0               0660   system     system
 /dev/i2c-5                0660   media       media
+/dev/input/event*         0660   system     input
 /dev/avtimer              0660   system     audio
 
 # TFA9890 For SmartPA
@@ -222,6 +228,8 @@
 /sys/devices/virtual/optical_sensors/lightsensor    ls_poll_delay  0660    input    system
 /sys/devices/virtual/input/input*                   poll           0660    input    system
 /sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
+/sys/devices/virtual/input/input*                   enable         0660    system   input
+/sys/devices/virtual/input/input*                   poll_delay     0660    system   input
 /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input*    secure_touch         0440   system  drmrpc
 /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input*    secure_touch_enable  0660   system  drmrpc
 /sys/devices/soc/78b7000.i2c/i2c-3/3-0038/input/input*    secure_touch         0440   system  drmrpc
@@ -232,8 +240,9 @@
 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input*    secure_touch_enable  0660   system  drmrpc
 
 # laser sensor access
-/sys/devices/virtual/input/input*                   enable_ps_sensor 0660  system   system
-/sys/devices/virtual/input/input*                   set_delay_ms     0660  system   system
+/sys/devices/virtual/input/input*                   enable_ps_sensor 0660  system   input
+/sys/devices/virtual/input/input*                   set_delay_ms     0660  system   input
+/sys/devices/virtual/input/input*                   do_flush         0660  system   input
 
 # vm_bms
 /dev/vm_bms               0660   system     system
@@ -244,11 +253,6 @@
 /dev/wcnss_ctrl           0660   system     system
 /sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0/queues/rx-* rps_cpus 0660 system system
 /sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/p2p0/queues/rx-* rps_cpus 0660 system system
-
-#nfc permissions
-/dev/nfc-nci              0660    nfc         nfc
-/dev/nq-nci               0660    nfc         nfc
-/dev/assd                 0660    nfc         nfc
 
 # UIO devices
 /dev/uio0                 0660   system     system
@@ -274,8 +278,7 @@
 # Add device block for FRP
 /dev/block/platform/soc/7824900.sdhci/by-name/config    0600   system     system
 /dev/block/platform/soc/7464900.sdhci/by-name/frp       0600   system     system
-/dev/block/platform/soc/624000.ufshc/by-name/frp        0600   system     system
-/dev/block/platform/soc/1da4000.ufshc/by-name/frp       0600   system     system
+/dev/block/platform/soc/c0c4000.sdhci/by-name/frp       0600   system     system
 
 # Kmsg device
-/dev/kmsg                 0620   root       system
+/dev/kmsg                                               0620   root       system
