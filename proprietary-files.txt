@@ -365,9 +365,9 @@ vendor/lib64/libsdm-diag.so|0e5be5803c36ed004724be97553f5ae18a1f24de
 vendor/lib64/libsdmextension.so|be02dd004708b621e1fc639a51b6bcffb2c1c60d
 vendor/lib64/libtinyxml2_1.so|5ffb12fd2162910fc95be463fcde04ab5c427045
 
-# Graphics (Vulkan) - from revision LA.UM.5.5.r1-02500-8x96.0
-vendor/lib/hw/vulkan.msm8996.so|0b69fd00ce1e3da65105e57b35ef17c78fe103d2
-vendor/lib64/hw/vulkan.msm8996.so|f4aa9246941c864ab186910e6ccff844b70e5c19
+# Graphics (Vulkan) - from gemini - OPR1.170623.032
+vendor/lib/hw/vulkan.msm8996.so|c8522f8d7b3f958e9d3a706ad43eaa9a9ee82f91
+vendor/lib64/hw/vulkan.msm8996.so|006010353698efc71b3542fb08871763ca06878a
 
 # Graphics firmware
 vendor/firmware/a530_gpmu.fw2
