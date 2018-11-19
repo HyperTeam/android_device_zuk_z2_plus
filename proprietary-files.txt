@@ -88,7 +88,7 @@ vendor/lib/libmmcamera2_memleak.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so|24bc812675ad71ca04b2bd309dd372f13bedfa5e
+vendor/lib/libmmcamera2_sensor_modules.so|efe8409a0380e87c68eaf3ad03ed0db3a27c8762
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera_dbg.so
@@ -274,6 +274,7 @@ vendor/lib64/librpmb.so|13e932556c05dcf37b1c6f2038a670e239c56315
 vendor/lib64/libssd.so|baabf76b79866df9dabfd7761d7338e54757bc3f
 
 # Fingerprint
+framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
 vendor/bin/qvop-daemon
 lib64/hw/fingerprint.qcom.so:vendor/lib64/hw/fingerprint.qcom.so
 vendor/lib64/libqvop-service.so
@@ -571,6 +572,7 @@ vendor/radio/qcril_database/qcril.db|8405d20c8e1184c79eba1c4f19ecfb92d7529bdf
 
 # Sensors
 vendor/bin/sensors.qcom
+vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 vendor/lib/hw/activity_recognition.msm8996.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
