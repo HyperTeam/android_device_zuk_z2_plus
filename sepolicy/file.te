@@ -1,6 +1,5 @@
 type fingerprint_data_file, file_type, data_file_type;
 type sysfs_devices_fingerprint, sysfs_type, file_type;
-type thermal_data_file, file_type;
 type debugfs_rmt, debugfs_type, fs_type;
 type debugfs_wlan, debugfs_type, fs_type;
 type vendor_keylayout_file, vendor_file_type, file_type;
