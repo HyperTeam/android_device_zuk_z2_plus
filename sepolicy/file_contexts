@@ -4,13 +4,12 @@
 # Block devices
 /dev/block/platform/soc/7464900\.sdhci/by-name/persist  u:object_r:persist_block_device:s0
 
-# Sys files
-/sys/devices/soc/75b7000\.i2c/i2c-9/9-[0-9a-f]+/leds(/.*)?      u:object_r:sysfs_leds:s0
-/sys/devices/soc/leds-qpnp-[0-9]+/leds(/.*)?                    u:object_r:sysfs_leds:s0
-
 # Fingerprint
 /data/fpc(/.*)?                                                 u:object_r:fingerprint_data_file:s0
 /sys/devices/soc/soc:fpc1020(/.*)?                              u:object_r:sysfs_devices_fingerprint:s0
+
+# Gesture
+/sys/devices/virtual/touch/tp_dev/gesture_on                    u:object_r:sysfs_gesture:s0
 
 # Keylayout
 /vendor/usr/keylayout/fpc1020tp\.kl                             u:object_r:vendor_keylayout_file:s0
@@ -18,7 +17,11 @@
 /vendor/usr/keylayout/gpio-keys\.kl                             u:object_r:vendor_keylayout_file:s0
 /vendor/usr/keylayout/qpnp_pon\.kl                              u:object_r:vendor_keylayout_file:s0
 
-# HALs
+# LEDs
+/sys/devices/soc/75b7000\.i2c/i2c-9/9-[0-9a-f]+/leds(/.*)?      u:object_r:sysfs_leds:s0
+/sys/devices/soc/leds-qpnp-[0-9]+/leds(/.*)?                    u:object_r:sysfs_leds:s0
+
+# Lights HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.z2_plus    u:object_r:hal_light_default_exec:s0
 
 # Thermal
