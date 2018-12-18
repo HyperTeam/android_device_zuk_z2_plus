@@ -599,11 +599,11 @@ vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
-# Thermal
-vendor/bin/thermal-engine
-vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
-vendor/lib/libthermalclient.so
+# Thermal - from Xiaomi 8996 MIUI 8.1.4
+vendor/bin/thermal-engine|fa2e79587ba002817a933230d7381884f64b36e4
+vendor/lib64/libthermalclient.so|ebffb4d72142ac6a4c828d787026a8f6c741d211
+vendor/lib64/libthermalioctl.so|be0c236b6f5e4594c54eaefa2961cfb9692fc327
+vendor/lib/libthermalclient.so|cad864aac104c21a1957e3e05b2d4c958ee48db8
 
 # Time services - from bardock - OPM1.171019.019
 -vendor/app/TimeService/TimeService.apk|5055619766db32fe499cda86b892c9f3081219c5
